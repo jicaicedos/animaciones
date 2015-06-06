@@ -1,0 +1,110 @@
+ 	// 	div(class='colombia')
+		// 	div(class='amarillo')
+		// 	div(class='azul')
+		// 	div(class='rojo')
+		// div(class='brasil')
+		// 	div(class='verde')
+		// 	div(class='amarillo')
+
+
+// body
+// 	background lightgray
+// 	margin 40px
+// 	display flex
+// 	justify-content space-between
+	
+// .amarillo
+// 	height 40px
+// 	background yellow
+
+// .azul
+// 	height 20px
+// 	background blue
+	
+// .rojo
+// 	height 20px
+// 	background red
+	
+// .verde
+// 	height 40px
+// 	background green
+
+
+// .brasil
+// 	border 2px solid black
+// 	width 80px
+// 	height 80px
+// 	border-radius 50%
+// 	overflow hidden
+// 	animation-name moverIzquierda
+// 	animation-duration 4s
+	
+// .colombia
+// 	border 2px solid black
+// 	width 80px
+// 	height 80px
+// 	border-radius 50%
+// 	overflow hidden
+// 	animation-name moverDerecha
+// 	animation-duration 4s
+
+// 
+body
+	background lightgray
+	margin 40px
+	display flex
+	justify-content space-between
+
+// Circulo de color amarillo
+.aro_derecho
+	background yellow
+	width 80px
+	height 80px
+	border-radius 50%
+	animation-name moverIzquierda
+	animation-duration 4s
+	
+// Circulo de color rojo
+.aro_izquierdo
+	background red
+	width 80px
+	height 80px
+	border-radius 50%
+	animation-name moverDerecha
+	animation-duration 4s
+
+// Circulo de combinación
+.aro_medio
+	background orange
+	width 0px
+	height 80px
+	border-radius 50%
+	animation-name combinado
+	// Permite mantener los cambios realizados
+	// después de terminada la animación
+	animation-fill-mode forwards
+	animation-duration 4s
+	animation-delay 4s
+
+// Mueve un elemento hacia la derecha
+@keyframes moverDerecha
+	0%
+		opacity 0
+	100%
+		opacity 1
+		margin-left 630px
+// Mueve un elemento hacia la izquierda
+@keyframes moverIzquierda
+	0%
+		opacity 0
+	100%
+		opacity 1
+		margin-right 630px
+
+// Muestra el elemento que es la combinación de los colores
+@keyframes combinado
+	0%
+		width 0px
+	100%
+		width 80px
+
